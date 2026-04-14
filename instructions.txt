@@ -1,0 +1,20 @@
+install python 3.7.0 and i did all settings inside hello-eth ethereum tool
+
+
+install node-v12.13.1-64.msi software and this software available inside code folder
+then install packages from requirements.txt file
+
+i did all setup just follow screens shots
+
+
+blockchain server can be start from hello-eth folder and server starting details are already given in screenshots
+
+After contract deployment in etherum black window you will get contract address under Governance section and that contract
+address you replace in BlockchainGovernance/GovernanceApp/views.py python file
+
+in BlockchainGovernance/GovernanceApp/views.py file you can see contract address like '0x1DD4fb45C1cdC8C3f32cbaA60464c8107D4D4058' 
+this at line no 42 and just replace this with new contract address
+
+python application can be started from BlockchainGovernance/run.bat 
+just double click on 'runServer.bat' file to start python web server and then 
+follow screen shots
