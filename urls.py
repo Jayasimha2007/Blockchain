@@ -1,26 +1,22 @@
-from django.urls import path
+"""Governance URL Configuration
 
-from . import views
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/2.1/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django.contrib import admin
+from django.urls import path, include
 
-urlpatterns = [path("index.html", views.index, name="index"),
-	       path('AdminLogin.html', views.AdminLogin, name="AdminLogin"), 
-	       path('HospitalLogin.html', views.HospitalLogin, name="HospitalLogin"), 
-	       path('EducationLogin.html', views.EducationLogin, name="EducationLogin"), 
-	       path('UserLogin.html', views.UserLogin, name="UserLogin"), 
-	       path('AddHospitals.html', views.AddHospitals, name="AddHospitals"),
-	       path('AddHospitalsAction', views.AddHospitalsAction, name="AddHospitalsAction"),	
-	       path('AddEducation', views.AddEducation, name="AddEducation"),
-	       path('AddEducationAction', views.AddEducationAction, name="AddEducationAction"),
-	       path('ViewHospitals', views.ViewHospitals, name="ViewHospitals"),
-	       path('ViewEducation', views.ViewEducation, name="ViewEducation"),
-	       path('AdminLoginAction', views.AdminLoginAction, name="AdminLoginAction"), 
-	       path('HospitalLoginAction', views.HospitalLoginAction, name="HospitalLoginAction"), 	
-	       path('EducationLoginAction', views.EducationLoginAction, name="EducationLoginAction"),	
-	       path('UserLoginAction', views.UserLoginAction, name="UserLoginAction"),	
-	       path('AddStudent', views.AddStudent, name="AddStudent"),
-	       path('AddStudentAction', views.AddStudentAction, name="AddStudentAction"),
-	       path('ViewStudent', views.ViewStudent, name="ViewStudent"),
-	       path('AddPatients', views.AddPatients, name="AddPatients"),
-	       path('AddPatientsAction', views.AddPatientsAction, name="AddPatientsAction"),
-	       path('ViewPatients', views.ViewPatients, name="ViewPatients"),
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('GovernanceApp.urls')),
 ]
